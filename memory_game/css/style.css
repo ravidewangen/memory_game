@@ -1,0 +1,51 @@
+
+body{
+    width: 95vw;
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ecf0f1;
+}
+#card_bx{
+    display: flex;
+    flex-wrap: wrap;
+    width: 480px;
+    padding: 20px;
+}
+.card{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 5px;
+    margin: 5px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    transform-style: preserve-3d;
+    background: #fff;
+}
+
+.front-view {
+    position: absolute;
+    padding: 10px 25px;
+    background: #fff;
+   }
+.front-view i{
+    font-size:  75px;
+
+}
+.back-view{
+    position: absolute;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+.back-view img{
+    width: 100px;
+    height: 100px;
+    background: #fff;
+ }
+
+.card.active{
+    transform: rotateY(180deg);
+}
